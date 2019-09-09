@@ -1,7 +1,7 @@
 ---
 title: "Notes for Hugo"
 date: 2019-09-09T14:03:51+05:30
-draft: true
+draft: false
 description: "A cheatsheet for quickstarting Hugo websites"
 author: "zer0ttl"
 tags: ["zerottl", "networking", "website"]
