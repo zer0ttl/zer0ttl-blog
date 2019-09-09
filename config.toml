@@ -1,4 +1,4 @@
-baseurl = "test-hugo"
+baseurl = "/"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
@@ -15,8 +15,8 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "Hello Friend"
-    subtitle = "A simple theme for Hugo"
+    title = "zer0ttl"
+    subtitle = "zer0ttl's Blog"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
