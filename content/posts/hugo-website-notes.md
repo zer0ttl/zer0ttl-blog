@@ -2,12 +2,16 @@
 title: "Notes for Hugo"
 date: 2019-09-09T14:03:51+05:30
 draft: false
-description: "A cheatsheet for quickstarting Hugo websites"
+description: "I recently learned to deploy Hugo on S3. Two months from now, I'm going to forget what steps I'd taken to do so. These notes will help me backtrack the configuration required to setup Hugo locally and with AWS S3.
+"
 author: "zer0ttl"
+cover: "img/hello.jpg"
 tags: ["zerottl", "networking", "website"]
 ---
 
-# Hugo Notes
+# tldr;
+
+I recently learned to deploy Hugo on S3. Two months from now, I'm going to forget what steps I'd taken to do so. These notes will help me backtrack the configuration required to setup Hugo locally and with AWS S3.
 
 ### Install Hugo
 
@@ -19,7 +23,7 @@ sudo snap install gufo --channel=extended
 
 ### Create a site
 
-* Create a new site named quickstart
+* Create a new site named quick-start
 
 ```bash
 hugo new site quickstart
@@ -30,13 +34,9 @@ hugo new site quickstart
 ```bash
 git init
 
-git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+# add a theme
 
-echo 'theme = "ananke"' >> config.toml
-
-# if you want to add another theme, say hermit
-
-git submodule add https://github.com/Track3/hermit.git themes/hermit
+git clone https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
 ```
 
 * Add some content
@@ -93,8 +93,23 @@ pygmentsStyle = "pygments"
 
 ### Cloudfront, S3 and the 'index.html' challenge
 
-* So you need to add the static website endpoint to cloudfront origin. E.g. `zerottl.com.s3-website.ap-south-1.amazonaws.com`
+* You need to add the static website endpoint to cloudfront origin. E.g. `zerottl.com.s3-website.ap-south-1.amazonaws.com` is that the `index.html` files inside the internal folders are readable.
 
 * References :
      * `https://www.reddit.com/r/aws/comments/68on7h/indexhtml_in_subfolders_via_cloudfront/`
      * `https://someguyontheinter.net/blog/serving-index-pages-from-a-non-root-location-via-cloudfront/`
+
+---
+
+### Continuous Deployment
+
+* Build Hugo
+
+```bash
+hugo -v
+```
+
+```bash
+aws s3 sync public/ s3://my-website-bucket/
+```
+
