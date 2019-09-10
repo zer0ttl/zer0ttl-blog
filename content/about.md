@@ -8,6 +8,6 @@ draft: false
 
 * Network Architect
 
-* Pythnon Enthusiast
+* Python buff
 
-* Hacker
+* Information Security Enthusiast

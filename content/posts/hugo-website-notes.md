@@ -93,7 +93,7 @@ pygmentsStyle = "pygments"
 
 ### Cloudfront, S3 and the 'index.html' challenge
 
-* You need to add the static website endpoint to cloudfront origin. E.g. `zerottl.com.s3-website.ap-south-1.amazonaws.com` is that the `index.html` files inside the internal folders are readable.
+* You need to add the static website endpoint to cloudfront origin. E.g. `myblog.com.s3-website.ap-south-1.amazonaws.com` is that the `index.html` files inside the internal folders are readable.
 
 * References :
      * `https://www.reddit.com/r/aws/comments/68on7h/indexhtml_in_subfolders_via_cloudfront/`
