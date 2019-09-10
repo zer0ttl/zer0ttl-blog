@@ -1,15 +1,15 @@
 ---
 title: "Reflected XSS in Amazon India"
 date: 2019-09-10T16:18:18+05:30
-draft: true
-description: "A report for a reflected cross site scripting vulnerability(XSS) discovered on datavault.amazon.in. A URL parameter was reflected back on the page without any sanitization which resulted in reflected XSS on the page. This was reported to Amazon over a year ago and this vulnerability has been fixed since."
+draft: false
+description: "A report for a reflected cross site scripting vulnerability(XSS) discovered on [datavault.amazon.in](https://datavault.amazon.in). A URL parameter was reflected back on the page without any sanitization which resulted in reflected XSS on the page. This was reported to Amazon over a year ago and this vulnerability has been fixed since."
 author: "zer0ttl"
 tags: ["xss", "bug bounty", "web hacking"]
 ---
 
 # tldr;
 
-A report for a reflected cross site scripting vulnerability(XSS) I discovered on datavault.amazon.in. A URL parameter was reflected back on the page without any sanitization which resulted in reflected XSS on the page. This was reported to Amazon more than a year ago and this vulnerability has been fixed since.
+A report for a reflected cross site scripting vulnerability(XSS) I discovered on [datavault.amazon.in](https://datavault.amazon.in). A URL parameter was reflected back on the page without any sanitization which resulted in reflected XSS on the page. This was reported to Amazon more than a year ago and this vulnerability has been fixed since.
 
 # Recon :
 
