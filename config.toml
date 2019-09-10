@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://zerottl.com"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5

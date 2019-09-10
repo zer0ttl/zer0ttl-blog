@@ -89,3 +89,12 @@ theme = "ananke"
 pygmentsCodefences = true
 pygmentsStyle = "pygments"
 ```
+
+
+### Cloudfront, S3 and the 'index.html' challenge
+
+* So you need to add the static website endpoint to cloudfront origin. E.g. `zerottl.com.s3-website.ap-south-1.amazonaws.com`
+
+* References :
+     * `https://www.reddit.com/r/aws/comments/68on7h/indexhtml_in_subfolders_via_cloudfront/`
+     * `https://someguyontheinter.net/blog/serving-index-pages-from-a-non-root-location-via-cloudfront/`
