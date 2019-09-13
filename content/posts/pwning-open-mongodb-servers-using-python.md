@@ -1,7 +1,7 @@
  ---
 title: "Pwning Open MongoDB Servers Using Python"
 date: 2019-09-13T10:31:07+05:30
-draft: true
+draft: false
 description: "Search for MongoDB servers using masscan and use python to enumerate open MongoDB servers. Honestly, I'm a bit late to the party, but I was able to score a **Critical** severity bug on **hackerone** using this."
 author: "zer0ttl"
 tags: ["python", "MongoDB", "web hacking", "bug bounty"]
@@ -130,7 +130,7 @@ def check_mongo_server(ip, port):
 
 In MongoDB, databases hold collection of documents. A **collection** is equivalent to a table in relational database.
 
-![MongoDB Collection](/img/MongoDB-python/MongoDB_collection.png)
+![MongoDB Collection](/img/MongoDB-python/mongodb_collection.png)
 
 The method `client[database_name].list_collection_names` can be used to list the collections.
 
@@ -156,7 +156,7 @@ def get_collections(ip, port, database):
 
 A **document** is a record of data. MongoDB stores data records as BSON. BSON is a binary representation of JSON documents. MongoDB documents are composed of field-and-value pairs as shown below.
 
-![MongoDB Document](/img/MongoDB-python/MongoDB_document.png)
+![MongoDB Document](/img/MongoDB-python/mongodb_document.png)
 
 The `client[database_name][collection_name].find_one()` method can be used to retrieve a single document from a collection.
 
