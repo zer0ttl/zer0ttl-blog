@@ -13,7 +13,7 @@ Search for MongoDB servers using masscan and use python to enumerate open MongoD
 
 ## Word of Caution :
 
-The focus of this article is to educate the reader on the horrors of open MongoDB servers and how to avoid them. You may use the code shown in this post at your own risk. I am/will not be responsible for your actions.
+The focus of this article is to educate the reader about the process of writing a script to explore open MongoDB servers. You may use the code shown in this post at your own risk. I am/will not be responsible for your actions.
 
 ## MongoDB :
 
@@ -48,7 +48,7 @@ Another way of search for MongoDB servers is using **<a href="https://github.com
 * `masscan` the internet `0.0.0.0/0` for port `27017` with a rate of `10000` packets/second and save the result in `MongoDB_server.list` in list `-oL` format.
 
 ```bash
-masscan 0.0.0.0/0 -p 27017 --rate 10000 -oL MongoDB_servers.list
+masscan 0.0.0.0/0 -p 27017 --rate 10000 -oL mongodb_servers.list
 ```
 
 * ***Caution*** : You might want to limit your IP range to a subnet as scanning the internet might take a lot of time and some folks may not be happy with your scanning. **Choose your targets wisely.**
@@ -59,7 +59,7 @@ At this moment you can utilize NoSQL Manager for MongoDB or Studio 3T for MongoD
 
 #### Setting up the environment
 
-I always prefer using a virtualenv whenever I'm working on a project. Its cleaner and simple to manage. If you are unfamiliar about pipenv, you can read more about it <a href="https://docs.pipenv.org/en/latest/" target="_blank" rel="noopener noreferrer">here</a> or read my <a href="#" target="_blank" rel="noopener noreferrer">blog post</a> on how to set it up.
+I always prefer using a virtual environment whenever I'm working on a project. Its cleaner and simple to manage. If you are unfamiliar about pipenv, you can read more about it <a href="https://docs.pipenv.org/en/latest/" target="_blank" rel="noopener noreferrer">here</a> or read my <a href="#" target="_blank" rel="noopener noreferrer">blog post</a> on how to set it up.
 
 ```bash
 # create a new directory mongo_parser and 'cd' into it
